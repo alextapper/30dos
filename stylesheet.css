@@ -1,0 +1,596 @@
+/*********************************************
+** Site: 30daysofsoylent.com
+** Author: Alex Tapper, Compound Creative
+** Date: May 2014
+** 
+** 
+**
+** The robbed that smiles has stolen something from the theif. 
+**/
+
+
+
+/*********************************************
+*********		   UNIVERSAL 		**********
+**********************************************/
+
+@font-face {
+	font-family: CourierPrime;
+	src: url(fonts/CourierPrime.ttf);
+}
+
+html {
+	font-family: CourierPrime, courier;
+	list-style: decimal-leading-zero;
+	text-rendering: optimizeLegibility;
+
+}
+
+a {
+	color: lightcoral;
+	text-decoration: none;
+}
+
+a:hover {
+	color: gold;
+}
+
+
+.emailbutton {
+	font-family: CourierPrime, courier, monospace;
+	display: block;
+	width: 270px;
+	color: white;
+	background-color: lightcoral;
+	text-align: center;
+
+	margin: 30px auto 40px auto;
+	box-shadow: 6px 6px 0px black;
+
+	color: white;
+}
+
+.emailbutton p, .emailbutton-inactive p {
+	padding: 10px;
+}
+
+.emailbutton:hover {
+	box-shadow: 6px -6px 0px black;
+	color: black;
+}
+
+.emailbutton:active {
+	background-color: gold;
+	color: white;
+	box-shadow: 6px 6px 0px black;
+}
+
+.emailbutton-inactive {
+	font-family: CourierPrime, courier, monospace;
+	display: block;
+	width: 270px;
+	color: white;
+	background-color: dimgrey;
+	text-align: center;
+
+	margin: 30px auto 40px auto;
+	box-shadow: 6px 6px 0px black;
+
+	color: white;
+
+	pointer-events: none;
+	cursor: default;
+}
+
+.strikeout {
+	text-decoration: line-through;
+}
+
+em {
+	font-style: italic;
+}
+
+ol {
+	list-style: decimal-leading-zero;
+	list-style-position: inside;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/*********************************************
+*********		   HEADER 			**********
+**********************************************/
+
+
+.buy-link {
+	text-align: center;
+	background-color: lightcoral;
+	padding: 10px 30px;
+
+	position: fixed;
+
+}
+
+.buy-link p, .buy-link a {
+	color: white;
+}
+
+header {
+	background-color: white;
+	clear: both;
+	text-align: center;
+}
+
+
+#logo {
+	width: 275px;
+	margin: 20px auto;
+	padding-top: 30px;
+}
+
+header ul {
+	font-size: 2em;
+	display: block;
+	margin: 0px auto 20px auto;
+}
+
+header ul li {
+	line-height: 1.6em;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+header ul li a:hover {
+	color: lightcoral;
+} 
+
+/*
+
+#logo {
+	max-width: 20%;
+	padding: 2.5%;
+}
+
+header ul {
+	float: right;
+	display: block;
+	clear: both;
+	width: 50%;
+	height: 100%;
+	vertical-align: center;
+	text-align: left;
+	
+	position: relative;
+	top: 50%;
+		-webkit-transform: translateY(50%);
+		-ms-transform: translateY(50%);
+		transform: translateY(50%);
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+
+header ul li {
+	font-family: CourierPrime, courier;
+	font-size: 2em;
+	padding: 10px 0px;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+header ul li a:hover {
+	color: lightcoral;
+}
+
+*/
+
+/*********************************************
+*********			BODY    		**********
+**********************************************/
+
+.calendar {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.day, .futureday {
+	height: 275px;
+	text-align: center;
+	display: inline-block;
+	background-color: lightsteelblue;
+	border-top: 4px black solid;
+
+	clear:both;
+	vertical-align: text-top;
+
+	margin-right: auto;
+	margin-left: auto;
+	width: 25%;
+	
+}
+
+.day:hover {
+	background-color: lightcoral;
+	color: white;
+}
+
+.day p {
+	text-decoration: none;
+	color: black;
+	font-family: CourierPrime, courier;
+	font-size: 4em;
+	
+	padding: 75px 0px 0px 0px;
+}
+
+.day p:hover {
+	/*color: white;*/
+}
+
+.futureday {
+	background-color: whitesmoke;
+	border-top: 4px grey solid;
+	pointer-events: none;
+    cursor: default;	
+}
+
+.futureday .flex-me {
+	display: flex;
+  align-items: center;
+	justify-content: center;
+	height: 100%
+}
+
+.futureday p {
+	color: grey;
+	text-decoration: none;
+	font-family: CourierPrime, courier;
+	font-size: 4em;
+	
+	padding: 0px 0px 0px 0px;
+
+	position: absolute;
+
+}
+
+.x {
+	width: 60%;
+	z-index: 9;
+	/* display: block; */
+	margin: 0 auto;
+}
+
+
+/*********************************************
+*********	    INTERROGATIVES    	**********
+**********************************************/
+
+.about-wrapper {
+	background-color: whitesmoke;
+	padding: 20px;
+}
+
+.about-wrapper ol {
+	font-size: 1.2em;
+	line-height: 1.6em;	
+} 
+
+.int-h1 {
+	margin: 20px auto;
+	font-size: 3em;
+	text-align: center;
+	max-width: 720px;
+}
+
+.rules {
+	margin: 30px auto;
+	max-width: 720px;
+	list-style: decimal-leading-zero;
+	line-height: 1.6em;
+}
+
+.rules li {
+	margin: 0 auto 20px 2.55em;
+}
+.selfie {
+	display: block;
+	max-width: 200px;
+	margin: 35px auto;
+}
+
+.contactwrapper {
+	padding: 0;
+}
+
+
+/*********************************************
+*********			posting    		**********
+**********************************************/
+
+.postwrapper {
+	background-color: whitesmoke;
+	padding: 20px;
+}
+
+.post-h1 {
+	margin: 20px auto;
+	font-size: 3em;
+	text-align: center;
+	max-width: 720px;
+}
+
+.post, h2, .postwrapper ol {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	max-width: 720px;
+	margin: 30px auto;
+}
+
+h2 {
+	font-style: italic;
+	text-align: center;
+
+}
+
+blockquote {
+	font-size: 1.6em;
+	line-height: 1.1em;
+	max-width: 720px;
+	margin: 30px auto;
+	font-weight: ;
+	border-left: 5px solid lightcoral;
+	padding-left: 30px;
+	-moz-box-sizing:    border-box;
+   	-webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+.self-portrait {
+	max-width: 600px;
+}
+
+.centered {
+	text-align: center;
+	width: 100%;
+}
+
+.inline-photo {
+	max-width: 720px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*********************************************
+*********			FOOTER    		**********
+**********************************************/
+
+footer {
+
+	background-color: dimgrey;
+
+	text-align: center;
+
+	font-family: CourierPrime, courier;
+	color: black;
+	font-size: 14px;
+	line-height: 1.3em;
+
+	padding: 10px;
+
+	clear: both;
+}
+
+footer a {
+	text-decoration: none;
+	color: gold;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: lightcoral;
+}
+
+
+
+/*********************************************
+*********			<1024px    		**********
+**********************************************/
+
+
+@media screen and (max-width: 1024px) {
+
+/*
+#logo {
+	max-width: 30%;
+	padding: 1.65%;
+}
+
+header ul {
+	display: inline-block;
+}
+
+header ul li {
+}
+
+*/
+.day, .futureday {
+	display: inline-block;
+	width: 33.3%;
+}
+
+}
+
+
+
+
+/*********************************************
+*********			<700px    		**********
+**********************************************/
+
+@media screen and (max-width: 700px) {
+
+/*
+#logo {
+	max-width: 44%;
+	padding: 3%;
+}
+
+header ul {
+	text-align: left;
+	width: 45%;
+	float: right;
+	clear: both;
+}
+
+header ul li {
+	display: block;
+	font-size: 1.5em;
+	overflow: auto;
+}
+
+*/
+
+.day, .futureday {
+	display: inline-block;
+	width: 50%;
+}
+
+footer br {
+	line-height: 2;
+}
+
+.self-portrait {
+	width: 100%;
+}
+
+.inline-photo {
+	width: 100%;
+}
+
+}
+
+/*********************************************
+*********			<500px    		**********
+**********************************************/
+
+@media screen and (max-width: 500px) {
+
+
+
+}
+
+/*********************************************
+*********			<400px    		**********
+**********************************************/
+
+@media screen and (max-width: 450px) {
+
+/*
+header {
+	text-align: center;
+	overflow: auto;
+}
+
+#logo {
+	max-width: 80%;
+	padding: 5%;
+}
+
+header ul {
+	clear: left;
+	width: 100%;
+	padding: 0 0 5% 0;
+	position: relative;
+	top: 50%;
+		-webkit-transform: translateY(-15%);
+		-ms-transform: translateY(-15%);
+		transform: translateY(-15%);
+}
+
+header ul li {
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
+
+*/
+
+
+#logo {
+	max-width: 200px;
+}
+
+header ul {
+	display: block;
+	margin: 0px auto 20px auto;
+}
+
+header ul li {
+	line-height: 1.6em;
+}
+
+.day, .futureday {
+	width: 50%;
+	height: 125px;
+}
+
+.day p, .futureday p {
+	font-size: 2.4em;
+	padding: 30px 0px 0px 0px;
+}
+
+.x {
+	position: relative;
+	top: -70px;
+	width: 30%;
+}
+
+.futureday p {
+	top: 0;
+}
+
+.rules {
+	max-width: 100%;
+}
+
+.post-h1, .int-h1 {
+	font-size: 2.8em;
+}
+
+.post, h2, .postwrapper ol, ol.rules {
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+blockquote {
+	font-size: 1.5em;
+	line-height: 1em;
+	padding-left: 20px;
+	-moz-box-sizing:    border-box;
+   	-webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+
+}
+
+.postwrapper .about-wrapper {
+	padding: 13px;
+}
+
+}
+
+
+
+
+
+
